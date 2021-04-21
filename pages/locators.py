@@ -16,3 +16,4 @@ class ProductPageLocators:
     NAME_OF_PRODUCT_EXPECTED = (By.CSS_SELECTOR, ".col-sm-6.product_main h1")
     NAME_OF_ACTUAL_PRODUCT = (By.CSS_SELECTOR, ".alertinner strong")
     MESSAGE_WITH_PRICE = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
