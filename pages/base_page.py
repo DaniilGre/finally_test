@@ -2,6 +2,7 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasketPageLocators
 from .locators import BasePageLocators
 import math
 
@@ -22,6 +23,10 @@ class BasePage:
         except:  # (имя исключения):
             return False
         return True
+
+    def go_to_basket_page(self):
+        basket_button = self.browser.find_element(*BasketPageLocators.BASKET_LINK)
+        basket_button.click()
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert

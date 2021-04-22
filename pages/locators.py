@@ -6,14 +6,9 @@ class LoginPageLocators:
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
 
 
-class MainPageLocators:
-    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini .btn-default[href]")
-
-
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
-
 
 class ProductPageLocators:
     BUTTON_ADD_TO_CARD = (By.CSS_SELECTOR, ".btn-add-to-basket")
@@ -26,4 +21,5 @@ class ProductPageLocators:
 
 class BasketPageLocators:
     CONTENT = (By.CSS_SELECTOR,"#content_inner > p")
+    BASKET_LINK = (By.CSS_SELECTOR, ".basket-mini .btn-default[href]")
 
