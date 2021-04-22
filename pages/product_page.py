@@ -1,7 +1,8 @@
 from .base_page import BasePage
+from .main_page import MainPage
 from .locators import ProductPageLocators
 
-class ProductPage(BasePage):
+class ProductPage(MainPage):
 
     __EXPECTED_NAME__ = ''
     __EXPECTED_PRICE__ = ''
