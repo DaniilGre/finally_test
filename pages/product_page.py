@@ -7,9 +7,6 @@ class ProductPage(BasketPage):
     __EXPECTED_NAME__ = ''
     __EXPECTED_PRICE__ = ''
 
-    # def should_be_product_url(self):
-    #    assert "?promo=newYear" in self.browser.current_url, "There is no product page"
-
     def should_find_add_button(self):
         assert self.is_element_present(*ProductPageLocators.BUTTON_ADD_TO_CARD), "There is no add button on the page"
         self.__EXPECTED_NAME__ = self.browser.find_element(*ProductPageLocators.NAME_OF_PRODUCT_EXPECTED).text
@@ -27,7 +24,7 @@ class ProductPage(BasketPage):
     def should_be_message_about_add_with_price(self):
         assert self.is_element_present(*ProductPageLocators.MESSAGE_WITH_PRICE), 'there is no message about add product'
 
-    def actual_name_in_the_basket(self):  # имя товара до, равно товару после
+    def actual_name_in_the_basket(self):
         ACTUAL_NAME_AFTER_ADD = self.browser.find_element(*ProductPageLocators.NAME_OF_ACTUAL_PRODUCT)
         assert ACTUAL_NAME_AFTER_ADD.text == self.__EXPECTED_NAME__, "we expected another name of the book"
 
